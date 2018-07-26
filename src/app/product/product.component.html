@@ -1,0 +1,22 @@
+<div class="alert"style="text-align:center;">
+  <div  class="alert alert-info">
+      <h1>{{product_info.username}}</h1>
+  </div>
+  <div > <h2>{{product_info.post}}</h2></div>
+<h1>Comments</h1>
+</div>
+<div class="alert">
+  <div class="alert alert-danger" >
+    <form (submit)="enter_comment()">
+    <input class="form-control" [(ngModel)]="save_comment" name="comment" type="text" placeholder="Enter Your comment here">
+    <button type="submit" hidden>Enter</button>
+    </form>
+  </div>
+  <div>
+    <table class="table table-default">
+      <tr *ngFor="let x of show_a_comment">
+        <td><b>{{x.username}}</b><br>{{x.comment}}<b class="btnX" (click)="del_cmd(x)" style="float: right;" *ngIf="x.username==product_info.username">X</b></td>
+      </tr>
+    </table>
+  </div>
+</div>

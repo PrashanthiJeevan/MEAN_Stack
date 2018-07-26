@@ -1,0 +1,10 @@
+<div class="alert">
+    <h1 class="alert alert-info" style="text-align:center;">Login</h1>
+  </div>
+  <div>
+  <input type="text" class="form-control" [(ngModel)]="login.name" placeholder="name">
+  <input type="text" class="form-control" [(ngModel)]="login.password" placeholder="password">
+  <a href='/register'>Not Yet Registered</a><br>
+  <button class="btn btn-primary" style="width:100%" (click)="login_details()">Login</button>
+  </div>
+  

@@ -1,0 +1,38 @@
+<br>
+<div class="panel panel-info">
+<div class="panel-heading">
+Posts
+</div>
+<div class="panel-body" >
+  <div class="alert alert-danger">
+    <form (submit)="post_submit()">
+  <input type="text" class="form-control" [(ngModel)]="post_it" name="write_a_post" placeholder="Enter Your Post Here">
+  <button type="submit" hidden>Submit post</button>
+    </form>
+</div>{{user_details.name}}
+  <table class="table table-hover">
+    
+<tr *ngFor="let x of products" >
+<td (click)="goto(x)">{{x.username}}</td>
+<td (click)="goto(x)">{{x.post}}</td>
+<td></td>
+<td><button (click)="del(x.post)" class="btn btn-warning" *ngIf="user_details.name==x.username">Delete</button></td>
+<td>
+ <p ><tr *ngFor="let y of likes;let z=index" > 
+    <td *ngIf="user_details.name!=y.username">
+        <i *ngIf="x.post==y.post" class="fa fa-thumbs-o-up" (click)="change_like($event,x.post)"></i>
+      </td>
+    <td *ngIf="user_details.name==y.username" >
+      <i *ngIf="x.post==y.post&&!y.liked"   class="fa fa-thumbs-o-up" (click)="change_like($event,x.post)">{{y.username}}</i>
+      <i *ngIf="x.post==y.post&&y.liked"  class="fa fa-thumbs-up" (click)="change_like($event,x.post)">{{y.username}}</i>
+    </td> 
+    
+    
+  </tr></p>
+
+</td>
+</tr>
+  </table>
+</div>
+</div>
+
