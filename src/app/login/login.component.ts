@@ -7,8 +7,8 @@ import {AuthService} from '../auth.service';
 })
 export class LoginComponent implements OnInit {
   login:any={
-    name:"vivek",
-    password:"password"
+    name:"",
+    password:""
   };
   responce:any;
   constructor(private _Auth:AuthService) { }
