@@ -1,1 +1,2 @@
 Install mongodb to start the program
+For node js install CORS
